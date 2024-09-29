@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="csci.ooad.arcane.PolymorphiaTest" tests="3" skipped="0" failures="3" errors="0" timestamp="2024-09-25T00:36:40" hostname="Chetans-Laptop.local" time="0.12">
+  <properties/>
+  <testcase name="testGame()" classname="csci.ooad.arcane.PolymorphiaTest" time="0.067">
+    <failure message="org.mockito.exceptions.base.MockitoException: &#10;Mockito cannot mock this class: class csci.ooad.arcane.entity.Adventurer.&#10;&#10;If you're not sure why you're getting this error, please report to the mailing list.&#10;&#10;&#10;Java               : 21&#10;JVM vendor name    : Amazon.com Inc.&#10;JVM vendor version : 21.0.4+7-LTS&#10;JVM name           : OpenJDK 64-Bit Server VM&#10;JVM version        : 21.0.4+7-LTS&#10;JVM info           : mixed mode, sharing&#10;OS name            : Mac OS X&#10;OS version         : 14.6.1&#10;&#10;&#10;You are seeing this disclaimer because Mockito is configured to create inlined mocks.&#10;You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.&#10;&#10;Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]" type="org.mockito.exceptions.base.MockitoException">org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class csci.ooad.arcane.entity.Adventurer.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 21
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 21.0.4+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 21.0.4+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 14.6.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]
+	at app//csci.ooad.arcane.PolymorphiaTest.setUp(PolymorphiaTest.java:24)
+	at java.base@21.0.4/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]
+	at app//net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:153)
+	at app//net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:366)
+	at app//net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:175)
+	at app//net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:377)
+	... 4 more
+Caused by: java.lang.IllegalStateException: 
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:280)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.mockClass(InlineBytecodeGenerator.java:213)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.lambda$mockClass$0(TypeCachingBytecodeGenerator.java:47)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:153)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:366)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:175)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:377)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:40)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMockType(InlineDelegateByteBuddyMockMaker.java:389)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.doCreateMock(InlineDelegateByteBuddyMockMaker.java:349)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMock(InlineDelegateByteBuddyMockMaker.java:328)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.createMock(InlineByteBuddyMockMaker.java:56)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:53)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:84)
+	at org.mockito.Mockito.mock(Mockito.java:1956)
+	at org.mockito.Mockito.mock(Mockito.java:1871)
+	... 4 more
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:199)
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:180)
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:166)
+	at net.bytebuddy.utility.OpenedClassReader.of(OpenedClassReader.java:99)
+	at net.bytebuddy.dynamic.scaffold.TypeWriter$Default$ForInlining.create(TypeWriter.java:3916)
+	at net.bytebuddy.dynamic.scaffold.TypeWriter$Default.make(TypeWriter.java:2193)
+	at net.bytebuddy.dynamic.scaffold.inline.RedefinitionDynamicTypeBuilder.make(RedefinitionDynamicTypeBuilder.java:224)
+	at net.bytebuddy.dynamic.scaffold.inline.AbstractInliningDynamicTypeBuilder.make(AbstractInliningDynamicTypeBuilder.java:123)
+	at net.bytebuddy.dynamic.DynamicType$Builder$AbstractBase.make(DynamicType.java:3658)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.transform(InlineBytecodeGenerator.java:393)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses0(Native Method)
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses(InstrumentationImpl.java:225)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:276)
+	... 19 more
+</failure>
+  </testcase>
+  <testcase name="testIsOverMethod()" classname="csci.ooad.arcane.PolymorphiaTest" time="0.024">
+    <failure message="org.mockito.exceptions.base.MockitoException: &#10;Mockito cannot mock this class: class csci.ooad.arcane.entity.Adventurer.&#10;&#10;If you're not sure why you're getting this error, please report to the mailing list.&#10;&#10;&#10;Java               : 21&#10;JVM vendor name    : Amazon.com Inc.&#10;JVM vendor version : 21.0.4+7-LTS&#10;JVM name           : OpenJDK 64-Bit Server VM&#10;JVM version        : 21.0.4+7-LTS&#10;JVM info           : mixed mode, sharing&#10;OS name            : Mac OS X&#10;OS version         : 14.6.1&#10;&#10;&#10;You are seeing this disclaimer because Mockito is configured to create inlined mocks.&#10;You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.&#10;&#10;Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]" type="org.mockito.exceptions.base.MockitoException">org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class csci.ooad.arcane.entity.Adventurer.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 21
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 21.0.4+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 21.0.4+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 14.6.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]
+	at app//csci.ooad.arcane.PolymorphiaTest.setUp(PolymorphiaTest.java:24)
+	at java.base@21.0.4/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]
+	at app//net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:153)
+	at app//net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:366)
+	at app//net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:175)
+	at app//net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:377)
+	... 4 more
+Caused by: java.lang.IllegalStateException: 
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:280)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.mockClass(InlineBytecodeGenerator.java:213)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.lambda$mockClass$0(TypeCachingBytecodeGenerator.java:47)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:153)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:366)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:175)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:377)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:40)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMockType(InlineDelegateByteBuddyMockMaker.java:389)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.doCreateMock(InlineDelegateByteBuddyMockMaker.java:349)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMock(InlineDelegateByteBuddyMockMaker.java:328)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.createMock(InlineByteBuddyMockMaker.java:56)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:53)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:84)
+	at org.mockito.Mockito.mock(Mockito.java:1956)
+	at org.mockito.Mockito.mock(Mockito.java:1871)
+	... 4 more
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:199)
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:180)
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:166)
+	at net.bytebuddy.utility.OpenedClassReader.of(OpenedClassReader.java:99)
+	at net.bytebuddy.dynamic.scaffold.TypeWriter$Default$ForInlining.create(TypeWriter.java:3916)
+	at net.bytebuddy.dynamic.scaffold.TypeWriter$Default.make(TypeWriter.java:2193)
+	at net.bytebuddy.dynamic.scaffold.inline.RedefinitionDynamicTypeBuilder.make(RedefinitionDynamicTypeBuilder.java:224)
+	at net.bytebuddy.dynamic.scaffold.inline.AbstractInliningDynamicTypeBuilder.make(AbstractInliningDynamicTypeBuilder.java:123)
+	at net.bytebuddy.dynamic.DynamicType$Builder$AbstractBase.make(DynamicType.java:3658)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.transform(InlineBytecodeGenerator.java:393)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses0(Native Method)
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses(InstrumentationImpl.java:225)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:276)
+	... 19 more
+</failure>
+  </testcase>
+  <testcase name="testPlayBothLowHealth()" classname="csci.ooad.arcane.PolymorphiaTest" time="0.025">
+    <failure message="org.mockito.exceptions.base.MockitoException: &#10;Mockito cannot mock this class: class csci.ooad.arcane.entity.Adventurer.&#10;&#10;If you're not sure why you're getting this error, please report to the mailing list.&#10;&#10;&#10;Java               : 21&#10;JVM vendor name    : Amazon.com Inc.&#10;JVM vendor version : 21.0.4+7-LTS&#10;JVM name           : OpenJDK 64-Bit Server VM&#10;JVM version        : 21.0.4+7-LTS&#10;JVM info           : mixed mode, sharing&#10;OS name            : Mac OS X&#10;OS version         : 14.6.1&#10;&#10;&#10;You are seeing this disclaimer because Mockito is configured to create inlined mocks.&#10;You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.&#10;&#10;Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]" type="org.mockito.exceptions.base.MockitoException">org.mockito.exceptions.base.MockitoException: 
+Mockito cannot mock this class: class csci.ooad.arcane.entity.Adventurer.
+
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 21
+JVM vendor name    : Amazon.com Inc.
+JVM vendor version : 21.0.4+7-LTS
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 21.0.4+7-LTS
+JVM info           : mixed mode, sharing
+OS name            : Mac OS X
+OS version         : 14.6.1
+
+
+You are seeing this disclaimer because Mockito is configured to create inlined mocks.
+You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.
+
+Underlying exception : org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]
+	at app//csci.ooad.arcane.PolymorphiaTest.setUp(PolymorphiaTest.java:24)
+	at java.base@21.0.4/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.4/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.mockito.exceptions.base.MockitoException: Could not modify all classes [class csci.ooad.arcane.entity.Character, class csci.ooad.arcane.entity.Adventurer, class java.lang.Object]
+	at app//net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:153)
+	at app//net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:366)
+	at app//net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:175)
+	at app//net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:377)
+	... 4 more
+Caused by: java.lang.IllegalStateException: 
+Byte Buddy could not instrument all classes within the mock's type hierarchy
+
+This problem should never occur for javac-compiled classes. This problem has been observed for classes that are:
+ - Compiled by older versions of scalac
+ - Classes that are part of the Android distribution
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:280)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.mockClass(InlineBytecodeGenerator.java:213)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.lambda$mockClass$0(TypeCachingBytecodeGenerator.java:47)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:153)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:366)
+	at net.bytebuddy.TypeCache.findOrInsert(TypeCache.java:175)
+	at net.bytebuddy.TypeCache$WithInlineExpunction.findOrInsert(TypeCache.java:377)
+	at org.mockito.internal.creation.bytebuddy.TypeCachingBytecodeGenerator.mockClass(TypeCachingBytecodeGenerator.java:40)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMockType(InlineDelegateByteBuddyMockMaker.java:389)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.doCreateMock(InlineDelegateByteBuddyMockMaker.java:349)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.createMock(InlineDelegateByteBuddyMockMaker.java:328)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.createMock(InlineByteBuddyMockMaker.java:56)
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:53)
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:84)
+	at org.mockito.Mockito.mock(Mockito.java:1956)
+	at org.mockito.Mockito.mock(Mockito.java:1871)
+	... 4 more
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:199)
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:180)
+	at net.bytebuddy.jar.asm.ClassReader.&lt;init&gt;(ClassReader.java:166)
+	at net.bytebuddy.utility.OpenedClassReader.of(OpenedClassReader.java:99)
+	at net.bytebuddy.dynamic.scaffold.TypeWriter$Default$ForInlining.create(TypeWriter.java:3916)
+	at net.bytebuddy.dynamic.scaffold.TypeWriter$Default.make(TypeWriter.java:2193)
+	at net.bytebuddy.dynamic.scaffold.inline.RedefinitionDynamicTypeBuilder.make(RedefinitionDynamicTypeBuilder.java:224)
+	at net.bytebuddy.dynamic.scaffold.inline.AbstractInliningDynamicTypeBuilder.make(AbstractInliningDynamicTypeBuilder.java:123)
+	at net.bytebuddy.dynamic.DynamicType$Builder$AbstractBase.make(DynamicType.java:3658)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.transform(InlineBytecodeGenerator.java:393)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses0(Native Method)
+	at java.instrument/sun.instrument.InstrumentationImpl.retransformClasses(InstrumentationImpl.java:225)
+	at org.mockito.internal.creation.bytebuddy.InlineBytecodeGenerator.triggerRetransformation(InlineBytecodeGenerator.java:276)
+	... 19 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

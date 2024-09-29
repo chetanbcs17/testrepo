@@ -1,0 +1,58 @@
+Starting play...
+Polymorphia MAZE: turn 1
+NORTH_WEST :
+Creature Ogre(health : 5.00) is here
+NORTH_EAST :
+Adventurer Adventurer(health : 5.00) is here
+SOUTH_WEST :
+SOUTH_EAST :
+
+Polymorphia MAZE: turn 2
+NORTH_WEST :
+Creature Ogre(health : 5.00) is here
+NORTH_EAST :
+SOUTH_WEST :
+SOUTH_EAST :
+Adventurer Adventurer(health : 4.75) is here
+
+Polymorphia MAZE: turn 3
+NORTH_WEST :
+Creature Ogre(health : 5.00) is here
+NORTH_EAST :
+Adventurer Adventurer(health : 4.50) is here
+SOUTH_WEST :
+SOUTH_EAST :
+
+Polymorphia MAZE: turn 4
+NORTH_WEST :
+Adventurer Adventurer(health : 4.25) is here
+Creature Ogre(health : 5.00) is here
+NORTH_EAST :
+SOUTH_WEST :
+SOUTH_EAST :
+
+Polymorphia MAZE: turn 5
+NORTH_WEST :
+Adventurer Adventurer(health : 3.75) is here
+Creature Ogre(health : 3.50) is here
+NORTH_EAST :
+SOUTH_WEST :
+SOUTH_EAST :
+
+Polymorphia MAZE: turn 6
+NORTH_WEST :
+Adventurer Adventurer(health : 1.25) is here
+Creature Ogre(health : 3.00) is here
+NORTH_EAST :
+SOUTH_WEST :
+SOUTH_EAST :
+
+Polymorphia MAZE: turn 7
+NORTH_WEST :
+Adventurer Adventurer(health : 0.75) is here
+Creature Ogre(health : 2.50) is here
+NORTH_EAST :
+SOUTH_WEST :
+SOUTH_EAST :
+
+Yaay, the Adventurer won!

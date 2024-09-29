@@ -9,6 +9,6 @@ public class Dice {
     private static final Random random = new Random();
 
     public static int roll() {
-        return random.nextInt(1, 7);
+        return random.nextInt(1, 6);
     }
 }
